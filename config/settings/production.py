@@ -8,11 +8,11 @@ DEBUG = False
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv("DB_NAME"),
-        'HOST': os.getenv("DB_HOST"),
-        'PORT': os.getenv("DB_PORT"),
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'NAME': os.getenv("DB_NAME", "django"),
+        'HOST': os.getenv("DB_HOST", "db"),
+        'PORT': os.getenv("DB_PORT", 5432),
+        'USER': os.getenv("DB_USER", "django"),
+        'PASSWORD': os.getenv("DB_PASSWORD", "django"),
 
     }
 }
